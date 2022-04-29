@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import AboutPage from './components/about-page/about-page.component';
+import HomePage from './components/home-page/home-page.component';
+import NavBar from './components/nav-bar/nav-bar.component';
+import { ScAppContainer } from './App.styles';
+import ProjectsPage from './components/projects-page/projects-page.component';
+import ContactPage from './components/contact-page/contact-page.component';
+import { Fragment, useEffect, useState } from 'react';
 
-function App() {
+const App = () => {
+  const [showContents, setShowContents] = useState(false)
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowContents(true)
+    }, 5000)
+  },)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <ScAppContainer>
+      <div className='nav-bar'> <NavBar/> </div>
+      <HomePage/>
+      {
+        showContents && (
+          <Fragment>
+            <AboutPage/>
+            <ProjectsPage/>
+            <ContactPage/>
+          </Fragment>
+        )
+      }
+
+    </ScAppContainer>
+  )
 }
 
 export default App;
