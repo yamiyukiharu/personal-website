@@ -22,11 +22,11 @@ const AboutPage = () => {
             const { title, description, tech } = skill;
             if (idx === 0) {
               return (
-                <SkillCard key={idx} title={title} description={description} tech={tech} isFirst={true} delay={0}/>
+                <SkillCard key={idx} title={title} description={description} tech={tech} delay={0}/>
               );
             } else if (idx === skills.length-1) {
               return (
-                <SkillCard key={idx} title={title} description={description} tech={tech} isLast={true} delay={idx / 6}/>
+                <SkillCard key={idx} title={title} description={description} tech={tech} delay={idx / 6}/>
               );
             } else {
               return (
