@@ -9,6 +9,7 @@ export const ScProjectCardContainer = styled.div`
 
   @media ${device.laptop} {
     flex-direction: row;
+    justify-content: space-around;
   }
 
   padding-left: 10px;
@@ -18,7 +19,6 @@ export const ScProjectCardContainer = styled.div`
 `;
 
 export const ScImagePreview = styled.img`
-  flex-grow: 1;
   height: 200px;
   width: 300px;
 
@@ -62,6 +62,7 @@ export const ScContent = styled.div`
   justify-content: center;
   align-items: center;
   flex-grow: 1;
+  max-width: 400px;
   row-gap: 10px;
   font-size: 12px;
   color: #121212;
