@@ -31,11 +31,18 @@ export const ScImagePreview = styled.img`
     height: 450px;
     width: 675px;
   }
-
-
-
   border-radius: 5px;
 `;
+
+export const ScMobileImagePreview = styled.img`
+  height: 400px;
+  width: 190px;
+
+  @media ${device.mobileL} {
+    height: 450px;
+    width: 225px;
+  }
+`
 
 export const ScTitle = styled.div`
   font-size: 14px;
@@ -90,9 +97,10 @@ export const ScButton = styled.div`
   &:active {
     transform: scale(1);
   }
-
-  a {
-    text-decoration: none;
-    color: white;
-  }
 `;
+
+export const ScLink = styled.a`
+  display: flex;
+  text-decoration: none;
+  color: white;
+`

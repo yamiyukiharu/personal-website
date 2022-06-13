@@ -18,12 +18,14 @@ import { useEffect, useState, Fragment } from "react";
 
 const HomePage = () => {
   const jobTitles = [
-    "maker",
-    "maker",
-    "fitness enthusiast",
-    "problem solver",
-    "aspiring entrepreneur",
-    "full-stack developer",
+    "Maker",
+    "Maker",
+    "Fitness Enthusiast",
+    "Problem Solver",
+    "Aspiring Entrepreneur",
+    "Python Developer",
+    "Front-End Web Developer",
+    "React-Native Mobile Developer",
   ];
 
   const [showIntro, setShowIntro] = useState(false);
@@ -31,7 +33,7 @@ const HomePage = () => {
   useEffect(() => {
     setTimeout(() => {
       setShowIntro(true);
-    }, 500);
+    }, 400);
   }, []);
 
   return (
@@ -45,9 +47,9 @@ const HomePage = () => {
           <ScPassionContainer>
           {showIntro && (
             <Fragment>
-              <ScPassionText>I am a</ScPassionText>
+              <ScPassionText>I'm a</ScPassionText>
               <ScPassion>
-                <RollingText texts={jobTitles} interval={800} delay={0} />
+                <RollingText texts={jobTitles} interval={700} delay={0} />
               </ScPassion>
             </Fragment>
           )}

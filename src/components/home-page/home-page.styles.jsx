@@ -88,7 +88,7 @@ export const ScPassionContainer = styled.div`
   align-items: center;
   column-gap: 10px;
   height: 10px;
-  font-size: 20px;
+  font-size: 16px;
   margin-left: 20px;
 
   @media ${device.tablet} {
@@ -96,12 +96,20 @@ export const ScPassionContainer = styled.div`
     font-size: 30px;
   }
 `;
+
 export const ScPassionText = styled.div`
+  width: 50px;
+  @media ${device.tablet} {
+    width: 70px;
+  }
   animation: title_appear 1s linear forwards;
   color: var(--normal-text-color);
 `;
 
 export const ScPassion = styled.div`
+  @media ${device.tablet} {
+    width: 400px;
+  }
   color: var(--primary-color);
 `;
 
@@ -111,7 +119,7 @@ export const ScScrollMessage = styled.div`
   column-gap: 15px;
   font-size: 20px;
   color: var(--normal-text-color);
-  animation: scroll_msg_appear 1s 5s forwards;
+  animation: scroll_msg_appear 1s 6s forwards;
   opacity: 0;
   margin-bottom: 80px;
 

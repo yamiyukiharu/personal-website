@@ -9,8 +9,37 @@ import {ReactComponent as qtIcon} from '../assets/icons/qt-1.svg'
 import {ReactComponent as cppIcon} from '../assets/icons/c.svg'
 import {ReactComponent as opencvIcon} from '../assets/icons/opencv.svg'
 import {ReactComponent as tensorflowIcon} from '../assets/icons/tensorflow-2.svg'
+import {ReactComponent as reactNativeIcon} from '../assets/icons/react-native-1.svg'
+import {ReactComponent as typescriptIcon} from '../assets/icons/typescript.svg'
+import {ReactComponent as firebaseIcon} from '../assets/icons/firebase-1.svg'
 
 export const skills = [
+    {
+        title: 'Mobile App Development',
+        description: 'I love creating solutions to everyday problems, and there is no better way than a writing mobile app.',
+        tech: [
+            {
+                name: 'React-Native' ,
+                icon: reactNativeIcon,
+            },
+            {
+                name: 'TypeScript' ,
+                icon: typescriptIcon,
+            },
+            {
+                name: 'Redux' ,
+                icon: reduxIcon,
+            },
+            {
+                name: 'Firebase' ,
+                icon: firebaseIcon,
+            },
+            {
+                name: 'Figma' ,
+                icon: figmaIcon,
+            },
+        ]
+    },
     {
         title: 'Web Frontend Development',
         description: 'I like to code things from scratch, and enjoy bringing ideas to life in the browser.',

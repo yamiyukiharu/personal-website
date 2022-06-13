@@ -3,12 +3,14 @@ import {
   ScButtonContainer,
   ScContent,
   ScImagePreview,
+  ScLink,
+  ScMobileImagePreview,
   ScProjectCardContainer,
   ScTitle,
 } from "./project-card.styles";
 
 const ProjectCard = ({ project, isAlternate = false }) => {
-  const { title, image, description, appLink, repoLink } = project;
+  const { title, image, description, appLink, repoLink, projectPage } = project;
 
   return isAlternate ? (
     <ScProjectCardContainer>
@@ -16,41 +18,52 @@ const ProjectCard = ({ project, isAlternate = false }) => {
         <ScTitle>{title}</ScTitle>
         <div>{description}</div>
         <ScButtonContainer>
-          {appLink !== "" && (
-            <ScButton>
-              <a href={appLink} target="_blank">
-                Live App
-              </a>
-            </ScButton>
+          {projectPage !== "" && (
+            <ScLink href={projectPage} target="_blank" rel="noreferrer">
+              <ScButton>Read More</ScButton>
+            </ScLink>
           )}
-          <ScButton>
-            <a href={repoLink} target="_blank">
-              Repository
-            </a>
-          </ScButton>
+          {appLink !== "" && (
+            <ScLink href={appLink} target="_blank" rel="noreferrer">
+              <ScButton>Live App</ScButton>
+            </ScLink>
+          )}
+          <ScLink href={repoLink} target="_blank" rel="noreferrer">
+            <ScButton>Repository</ScButton>
+          </ScLink>
         </ScButtonContainer>
       </ScContent>
-      <ScImagePreview src={image} />
+      {title === "Shoken App" ? (
+        <ScMobileImagePreview src={image} />
+      ) : (
+        <ScImagePreview src={image} />
+      )}
     </ScProjectCardContainer>
   ) : (
     <ScProjectCardContainer>
-      <ScImagePreview src={image} />
+      {title === "Shoken App" ? (
+        <ScMobileImagePreview src={image} />
+      ) : (
+        <ScImagePreview src={image} />
+      )}
+
       <ScContent>
         <ScTitle>{title}</ScTitle>
         <div>{description}</div>
         <ScButtonContainer>
-          {appLink !== "" && (
-            <ScButton>
-              <a href={appLink} target="_blank">
-                Live App
-              </a>
-            </ScButton>
+          {projectPage !== "" && (
+            <ScLink href={projectPage} target="_blank" rel="noreferrer">
+              <ScButton>Read More</ScButton>
+            </ScLink>
           )}
-          <ScButton>
-            <a href={repoLink} target="_blank">
-              Repository
-            </a>
-          </ScButton>
+          {appLink !== "" && (
+            <ScLink href={appLink} target="_blank" rel="noreferrer">
+              <ScButton>Live App</ScButton>
+            </ScLink>
+          )}
+          <ScLink href={repoLink} target="_blank" rel="noreferrer">
+            <ScButton>Repository</ScButton>
+          </ScLink>
         </ScButtonContainer>
       </ScContent>
     </ScProjectCardContainer>

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../../App.styles";
 
 export const ScNavBarContainer = styled.div`
   box-sizing: border-box;
@@ -6,7 +7,12 @@ export const ScNavBarContainer = styled.div`
   display: flex;
   padding: 26px 26px 26px 26px;
   align-items: center;
-  column-gap: 20px;
+  column-gap: 10px;
+
+  @media ${device.tablet} {
+    column-gap: 20px;
+  }
+
   width: 100%;
   background-color: var(--nav-bar-color);
   color: white;
@@ -31,6 +37,11 @@ export const ScAppName = styled.div`
 `;
 
 export const ScSection = styled.div`
-  font-size: 18px;
+  font-size: 12px;
+
+  @media ${device.tablet} {
+    font-size: 18px;
+  }
+
   cursor: pointer;
 `;
